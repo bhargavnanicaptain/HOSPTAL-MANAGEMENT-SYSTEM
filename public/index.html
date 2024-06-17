@@ -1,21 +1,20 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8" />
-    <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <meta name="theme-color" content="#000000" />
-    <meta
-      name="description"
-      content="Web site created using create-react-app"
-    />
-    <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
-    <!--
+
+<head>
+  <meta charset="utf-8" />
+  <link rel="icon" href="%PUBLIC_URL%/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#000000" />
+  <meta name="description" content="Web site created using create-react-app" />
+  <link rel="apple-touch-icon" href="%PUBLIC_URL%/logo192.png" />
+  <!--
       manifest.json provides metadata used when your web app is installed on a
       user's mobile device or desktop. See https://developers.google.com/web/fundamentals/web-app-manifest/
     -->
-    <link rel="manifest" href="%PUBLIC_URL%/manifest.json" />
-    <!--
+  <link rel="manifest"
+    href="data:image/png;base64,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" />
+  <!--
       Notice the use of %PUBLIC_URL% in the tags above.
       It will be replaced with the URL of the `public` folder during the build.
       Only files inside the `public` folder can be referenced from the HTML.
@@ -24,12 +23,13 @@
       work correctly both with client-side routing and a non-root public URL.
       Learn how to configure a non-root public URL by running `npm run build`.
     -->
-    <title>React App</title>
-  </head>
-  <body>
-    <noscript>You need to enable JavaScript to run this app.</noscript>
-    <div id="root"></div>
-    <!--
+  <title>HOSPITAL MANAGEMENT SYSTEM</title>
+</head>
+
+<body>
+  <noscript>You need to enable JavaScript to run this app.</noscript>
+  <div id="root"></div>
+  <!--
       This HTML file is a template.
       If you open it directly in the browser, you will see an empty page.
 
@@ -39,5 +39,6 @@
       To begin the development, run `npm start` or `yarn start`.
       To create a production bundle, use `npm run build` or `yarn build`.
     -->
-  </body>
+</body>
+
 </html>
